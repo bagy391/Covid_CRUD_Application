@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Covid-19</title>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="text-center display-4 ">COVID-19</h1>
+    <form id="insertid" action="/insert_suc" class="form-signin2" method="post">
+    <div style="padding-bottom: 10px;" >
+
+     <input  style="padding-bottom: 10px; type="text" name="p_id" class="form-control" placeholder="Patient ID" required autocomplete="off" >
+
+        <input  style="padding-bottom: 10px; type="text" name="p_name" class="form-control" placeholder="Name" required autocomplete="off" >
+            <input  style="padding-bottom: 10px; type="text" name="contact" class="form-control" placeholder="Contact Number" required autocomplete="off">
+    <input  style="padding-bottom: 10px; type="text" name="admit_date" class="form-control" placeholder="Admitted On" required autocomplete="off">
+  </div>
+  <div style="padding-bottom: 10px;" >
+    <p>GENDER</p>
+    <input id="male" name="gender"  type="radio" onclick="myFunction(this.value)" value="Male">
+    <label for="male">Male </label>
+    <input id="female" name="gender"  type="radio" onclick="myFunction(this.value)" value="Female">
+     <label for="female"> Female </label>
+    <input id="other" name="gender" type="radio" onclick="myFunction(this.value)" value="Other">
+    <label for="other">Others </label>
+
+
+  </div>
+  <label for="start">BIRTHDAY:</label>
+
+<input type="date" name="p_db" class="form-control" placeholder="dob" required autocomplete="off"
+       value="yyyy-mm-dd" min="1930-01-01" max="2020-06-01"
+       >
+    <div id="submitbtn">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </div>
+    <script>
+function myFunction(gender) {
+  document.getElementById("result").value = gender;
+}
+</script>
+
+</form>
+  </body>
+</html>

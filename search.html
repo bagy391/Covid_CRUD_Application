@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet">
+        <style>
+        body {
+     background-image: url("https://www.nsinsurance.com/wp-content/uploads/sites/9/2020/03/virus-4835301_640.jpg");
+     background-color: #cccccc;
+     background-position: center;
+      background-size: cover;
+    }
+    </style>
+  </head>
+  <body>
+    <form action="/searchPatient"  class="form-signin" method="post">
+      <input type="text" name="pat_id" class="form-control" placeholder="Enter Patient ID" required autocomplete="off">
+      <input type="text" name="pat_disch" class="form-control" placeholder="Enter Discharge date" autocomplete="off">
+      <button  class="btn btn-lg btn-primary btn-block" type="submit">Search/Update</button>
+    </form>
+  </body>
+</html>

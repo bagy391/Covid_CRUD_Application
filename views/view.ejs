@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Covid-19</title>
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+</head>
+<body>
+<h2>COVID-19 CASE OVERVIEW</h2>
+<form class="form-signin" method="post" >
+  <table width="80%" border="1" >
+   <tr>
+     <th>ID</th>
+     <th>Name</th>
+     <th>Gender</th>
+     <th>Contact</th>
+     <th>Admitted on</th>
+     <th>Discharged on</th>
+     <th>Date of birth</th>
+   </tr>
+
+   <% for(let i=0;i<content.length;i++){ %>
+   <tr>
+     <td> <%=content[i].p_id%>  </td>
+     <td> <%=content[i].p_name%> </td>
+     <td> <%=content[i].gender%> </td>
+     <td>    <%=content[i].contact%>  </td>
+     <td>   <%=content[i].admit_date %> </td>
+     <td>  <%=content[i].disch_date%> </td>
+     <td>  <%=content[i].p_db%> </td>
+   </tr>
+   <% } %>
+</table>
+
+
+</form>
+</body>
+</html>
